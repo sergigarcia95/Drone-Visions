@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+body {
+    background-color: #dfe3e6;
+}
+
+/*------ HEADER SECTION ------- */
+
+header {
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 6rem;
+    max-width: 100%;
+        /*sombra del texto*/
+    text-shadow: 2px 2px 105px rgba(0, 0, 0, 0.4);
+      /* sombra del contenedor */
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+      /* transición suave al pasar el mouse */
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+        
+}
+
+/* background: linear-gradient(to bottom, #edfaee, rgb(18, 116, 99)); */
+/*background: linear-gradient(
+    to bottom,
+    rgba(5, 25, 40, 0.75),
+    rgba(25, 85, 65, 0.55),
+    rgba(58, 122, 99, 0.45));
+    backdrop-filter: blur(8px) saturate(120%);*/
+
+nav {
+    position: fixed; /*Conseguimos que el nav no ocupe espacio y el video parta desde el top*/
+    background: transparent;
+    backdrop-filter: blur(4rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top:0;
+    left: 0;
+    padding: 6px 20px;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__link {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 0;
+    transition: background-color 0.2s, border-radius 0.2s, outline 0.2s, outline-offset 0.2s;
+}
+
+.nav__link:hover {
+    color: #fff;
+    background-color: rgba(46, 161, 142, 0.884);
+    border-radius: 20px;
+    outline: 2px solid #fff;
+    outline-offset: -6px;
+    transform: translateY(-3px);
+    box-shadow: 2px 3px 3px rgb(255, 255, 255);
+}
+
+.link--button {
+    border:1px solid #fff;
+    padding: 6px 8px;
+    margin-left: 20px;
+    transition: background-color 0.24s, border-radius 0.24s, outline 0.24s, outline-offset 0.24s;
+}
+
+.link--button:hover {
+    color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: -7px;
+    transform: translateY(-3px);
+    box-shadow: 2px 3px 3px rgb(255, 255, 255);
+}
+
+
+/*----- HERO -----*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-text{
+    z-index: 1;
+    height: 600px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-top: 4.5rem;
+}
+
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    top:0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -10;
+}
+
+/*------ SECTION TITLES------- */
+
+.portfolio-title {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url('imagenes/portfolio-aereo.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.portfolio-title p {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.8;
+}
+
+.portfolio-subtitle {
+    font-size: 1.2rem; 
+    font-family: 'Open Sans', sans-serif; 
+    text-align: center; 
+    color: #2C3E50; 
+    font-weight: 600; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+    line-height: 1.6;
+}
+
+.typewriter {
+    margin-top: 10rem;
+}
+
+.wrapper-title h2 {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(
+    to bottom,
+    rgba(5, 25, 40, 0.75),
+    rgba(25, 85, 65, 0.55),
+    rgba(58, 122, 99, 0.45));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    color: #222;
+    text-shadow: 2px 2px 0 rgba(5, 25, 40, 0.75) , 2px 2px 0 rgba(58, 122, 99, 0.45);
+    letter-spacing: 2px;
+}
+
+/*------ FOTOGRAFIAS SECTION ------- */
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 20px; /* espacio entre título y fotos */
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container1 {
+    position: relative;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 20% contain 40%;
+}
+
+.container1 h3{
+    margin-bottom: 10px; /* separa el título de la imagen */
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    top: 0px;        /* distancia desde arriba */
+    left: 50%;        /* lo manda al centro horizontal */
+    transform: translateX(-50%); /* corrige el centrado */
+    text-align: center;
+    color: white;     /* texto blanco para contraste */
+    background: rgba(0,0,0,0.4); /* fondo semitransparente */
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.container1 img{
+    display: block;
+    width: 480px;
+    height: 256px;
+    border-radius: 10px;
+}
+
+img.panama:hover{
+    opacity: 0.84;
+}
+
+img.costarica:hover{
+    opacity: 0.84;
+}
+
+
+/*----ANIMACIONES-----*/
+
+@keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+.slide,.typewriter {
+    animation: slideIn 1.5s ease-in-out forwards;
+    }
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/*----MEDIA QUERIES-----*/
+
+@media (min-width: 200px) {
+    .container img{
+        margin:auto;
+        max-width: 98%;
+        max-height: 95%;
+    }
+}
+
+@media (min-width: 200px) {
+    .background-video {
+        height: 95vh;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav__link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+
+
+/*---- FOOTER SECTION -----*/
+
+.footer {
+    background: linear-gradient(90deg, rgba(47,59,34,0.9) 0%, rgba(0,78,78,0.9) 50%, rgba(150, 205, 226, 0.9) 100%);
+backdrop-filter: blur(6px);
+    color: #f5f5f5;
+    text-align: center;
+    padding: 60px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer__brand h2 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.footer__brand span {
+  color: #00bfff; /* Azul celeste como acento */
+}
+
+.footer__brand p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer__copy {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
